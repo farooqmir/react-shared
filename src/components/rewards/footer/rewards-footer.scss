@@ -1,0 +1,256 @@
+// import tcom-core
+@import "@tcom/tcom-core/scss/_variables.scss";
+
+$grey: #414141;
+$grey-light: #f4f4f4;
+$grey-dark: #dadada;
+$line-height-20: 20px;
+$line-height-22: 22px;
+$line-height-23: 23px;
+$line-height-28: 28px;
+$margin-10: 10px;
+$margin-20: 20px;
+$padding-10: 10px;
+$padding-20: 20px;
+
+@mixin font-size($size) {
+  font-size: $size + px;
+}
+
+.tcom-global-footer {
+  width: 100%;
+  height: auto;
+  background-color: $grey-light;
+  color: $grey;
+
+  .footer-container {
+    padding: 0 $padding-20 + 4 $padding-10 $padding-20 + 4;
+
+    @include media-breakpoint-up(md) {
+      padding: $padding-20 * 3 $padding-10 * 5 + 6 $padding-10 * 11 + 2
+        $padding-10 * 5 + 6;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: 936px;
+      margin: auto;
+      padding: $padding-20 * 4 0 ($padding-10 * 5 + 4) 0;
+    }
+
+    @include media-breakpoint-up(xl) {
+      max-width: 1128px;
+      margin: auto;
+      padding-bottom: $padding-10 * 5 - 1;
+    }
+
+    .footer-links {
+      display: block;
+      .footerList {
+        border-bottom: 1px solid $grey-dark;
+      }
+
+      @include media-breakpoint-up(lg) {
+        display: flex;
+        justify-content: flex-start;
+        margin-bottom: $margin-10 * 3;
+        .footerList {
+          border-bottom: 0;
+        }
+      }
+
+      .footer-list {
+        display: none;
+
+        @include media-breakpoint-up(lg) {
+          display: block;
+          width: 216px;
+          margin-right: $margin-20 + 4;
+        }
+
+        @include media-breakpoint-up(xl) {
+          margin-right: $margin-10 * 7 + 2;
+        }
+      }
+
+      // last div having footer-list class
+      div:nth-last-child(1) > div.footer-list {
+        @include media-breakpoint-up(lg) {
+          margin-right: 0;
+        }
+      }
+
+      /* Accordion */
+      .accordion-tab {
+        margin-left: -8px;
+
+        @include media-breakpoint-up(lg) {
+          display: none;
+        }
+
+        .heading-text {
+          margin-bottom: 0;
+          padding: 20px 0 20px 8px;
+          box-sizing: content-box;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        label {
+          display: block;
+          height: 22px;
+          cursor: pointer;
+          .accordion-open-icon {
+            display: inline-block;
+          }
+          .accordion-close-icon {
+            display: none;
+          }
+        }
+
+        .tab-content {
+          max-height: 0;
+          overflow: hidden;
+          -webkit-transition: max-height 0.35s;
+          -o-transition: max-height 0.35s;
+          transition: max-height 0.35s;
+
+          ul {
+            margin-top: 0;
+            li:last-child {
+              margin-bottom: 8px;
+            }
+          }
+        }
+
+        input {
+          position: absolute;
+          opacity: 0;
+          z-index: -1;
+          &[type="checkbox"] {
+            &:checked {
+              & + label {
+                .accordion-close-icon {
+                  display: inline-block;
+                }
+                .accordion-open-icon {
+                  display: none;
+                }
+              }
+              & ~ .tab-content {
+                max-height: 30em;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Generic classes for footer - all views
+  ul {
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+      }
+
+      a {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        color: $grey;
+        text-decoration: none;
+        line-height: $line-height-20;
+        @include font-size(14);
+        padding: ($margin-20 + 8)/2 8px;
+        @include media-breakpoint-up(lg) {
+          padding: ($margin-10 + 2)/2 8px;
+        }
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      .footer-icon {
+        height: 16px;
+        width: 16px;
+        margin-left: $margin-10 - 5;
+      }
+    }
+  }
+
+  .heading-text {
+    @include font-size(16);
+    font-weight: bold;
+    line-height: $line-height-22;
+    margin-top: 0px;
+    margin-bottom: ($margin-10 * 3);
+
+    @include media-breakpoint-up(lg) {
+      @include font-size(20);
+      line-height: $line-height-28;
+      padding-left: 8px;
+    }
+  }
+
+  .telstra-social {
+    padding-top: $padding-20;
+
+    @include media-breakpoint-up(lg) {
+      padding: 0;
+    }
+
+    .heading-text {
+      margin-bottom: $margin-10 * 3 + 3 !important;
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: $margin-20 + 6 !important;
+      }
+    }
+
+    ul {
+      display: flex;
+      flex-wrap: wrap;
+
+      @include media-breakpoint-up(lg) {
+        padding-left: 8px;
+      }
+
+      li {
+        display: inline-block;
+        margin-bottom: $margin-20 + 4;
+        flex: 0 50%;
+
+        @include media-breakpoint-up(md) {
+          flex: none;
+          margin-bottom: $margin-10 + 2;
+          margin-right: $margin-10 * 3 + 2;
+        }
+
+        @include media-breakpoint-up(lg) {
+          flex: none;
+          margin-bottom: $margin-10 + 2;
+          margin-right: $margin-10 * 5 + 6;
+        }
+
+        .footer-icon {
+          height: 32px;
+          width: 32px;
+          opacity: 0.8;
+          margin-left: 0;
+          margin-right: $margin-10 - 5;
+        }
+        a {
+          padding: 0;
+        }
+      }
+    }
+  }
+}

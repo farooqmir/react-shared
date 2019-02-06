@@ -1,4 +1,5 @@
 import React from "react";
-import Footer from "./components/rewards/footer";
+import Header from "./components/rewards/Header";
+import Footer from "./components/rewards/Footer";
 
-export default Footer;
+export { Header, Footer };

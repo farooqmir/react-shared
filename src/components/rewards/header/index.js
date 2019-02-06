@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import "./header.scss";
 import PropTypes from "prop-types";
 import logo from "../../../static-content/images/rewards/logo.svg";
-
+//sdsdsd
 class Header extends Component {
   signout() {
     const { updateGlobalState } = this.props;
@@ -37,7 +37,7 @@ Header.defaultProps = {
   updateGlobalState: () => {},
   signoutText: "Sign out",
   logoImagePath: logo,
-  logoAltText: "Telstra Logo"
+  logoAltText: "Telstra d"
 };
 
 export default Header;

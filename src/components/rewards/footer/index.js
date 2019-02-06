@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "./rewards-footer.scss";
 
 const Footer = props => {
   const { footerFindUsMobile } = props;
