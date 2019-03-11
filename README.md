@@ -2,7 +2,7 @@
 > This repository is about creating your own React repository and distribute it. https://github.com/farooqmir/react-components-library.git
 
  
-##Commands
+## Commands
 > npm run dev
   ```
   This can be used for validating or developing your components before you the distribution.
@@ -13,7 +13,7 @@
   Build for production. Akternatively you can use it for development while watching as well.
   ```
   
-##Sample Imports
+## Sample Imports
 "F" prefix referes to "Functional" or "stateless" component. This is just to demostrate importing both Functional and statefull components
 
   ```js
@@ -26,7 +26,7 @@ Git commands are:
 git clone https://github.com/farooqmir/react-components-library.git
 ```
 
-##What is demostrated in this repository
+## What is demostrated in this repository
 - How to create a React package
 - Creating your own library for distribution.
 - Exporting your components.
