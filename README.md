@@ -34,3 +34,5 @@ git clone https://github.com/farooqmir/react-components-library.git
 - Importing your React components in other repositories.
 
 
+## Links for reference- HOW TO
+[Detailed Explination of how to create your own components library in React/ how to create your own React package for Distribution](https://medium.com/@farooqmajid/how-to-create-you-own-react-components-library-or-package-3558348cb746)
