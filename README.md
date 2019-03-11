@@ -5,7 +5,7 @@
 ## Commands
 > npm run dev
   ```
-  This can be used for validating or developing your components before you the distribution.
+  This can be used for validating or developing your components before the distribution.
   ```
 
 > npm run build
