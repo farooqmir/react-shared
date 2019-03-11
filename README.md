@@ -10,7 +10,7 @@
 
 > npm run build
   ```
-  Build for production. Akternatively you can use it for development while watching as well.
+  Build for production. Alternatively you can use it for development while watching as well.
   ```
   
 ## Sample Imports
